@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <!-- 웹환경에서 JavaScript의 목적 = HTML 조작과 변경 -->
+
+    <h4 class='test'>안녕하세요</h4>
+    <h4 class='test'>안녕하세요</h4>
+    <h4 class='test'>안녕하세요</h4>
+    
+    
+    <button class = 'btn'>버튼btn</button>
+    <button class = 'btn'>버튼btn</button>
+    <button class = 'btn'>버튼btn</button>
+    
+    
+    
+    
+    
+    <div class="alert-box" id = 'alert'>
+        <p id='title'>Alert 박스</p>
+        <button id = "close">닫기</button>
+    </div>    
+
+    <button onclick="알림창1('아이디를 입력하세요')">버튼1</button>
+
+    <button onclick="알림창1('비밀번호를 입력하세요')">버튼2</button>
+
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+
+        $('.test').eq(1).html('안녕');
+        
+        $('.btn').on('click',  function(){
+            $('.test').slideUp();
+            // $('.test').hide(); //   <-> show
+        })
+
+
+        function 알림창1(XY){
+            
+            document.getElementById('title').innerHTML='XY'
+            document.getElementById('alert').style.display='block';
+        }
+
+        document.getElementById('close').addEventListener('click', function(){
+            document.getElementById('alert').style.display='none';
+        })
+     
+        
+
+        
+        
+    
+
+
+    </script>
+</body>
+</html>
