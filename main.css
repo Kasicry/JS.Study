@@ -47,7 +47,14 @@
     display: none;
 }
 
-.btn-close{
-    background: red;
-    
+.삼육구{
+    text-align: center;
+}
+
+#email-alert{
+    display: none;
+}
+
+#passward-alert{
+    display: none;
 }
