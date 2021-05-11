@@ -28,8 +28,8 @@
                   <p id="email-alert">이메일이 빈칸입니다.</p>
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-control" placeholder="Password" id="passward">
-                  <p id="passward-alert">비밀번호가 빈칸입니다.</p>
+                  <input type="password" class="form-control" placeholder="Password" id="password">
+                  <p id="password-alert">비밀번호가 빈칸입니다.</p>
                 </div>
                 <button type="submit" class="btn btn-primary">전송</button>
                 <a class="btn btn-primary btn-danger" id='close' role="button">닫기</a>
@@ -78,6 +78,21 @@
     //            console.log("통과")
     //        }}
 
+    var 첫커피양 = 360;
+    var 마신커피 = 0;
+    var 리필양 = 첫커피양*2/3;
+    
+    마신커피 = 첫커피양 + 리필양;
+
+    리필양 = 리필양 + 리필양*2/3;
+
+    마신커피 = 첫커피양 + 리필양;
+
+
+
+    console.log(마신커피)
+    
+
 
 
             $('form').on('submit', function(e){
@@ -87,9 +102,9 @@
                     $('#email-alert').show();
                 }
 
-                if($('#passward').val()==''){
+                if($('#password').val()==''){
                     e.preventDefault();
-                    $('#passward-alert').show();
+                    $('#password-alert').show();
                     
                 }
 
