@@ -18,7 +18,14 @@
 
   <body>
 
-    <div class="black-background">
+
+    <div class='left-menu'>
+      <p>Menu Title</p>
+      </div>
+
+
+
+    <div class="black-background ">
         <div class="white-background">
             <p>로그인하세요</p>
 
@@ -57,6 +64,7 @@
         <hr class="my-4">
         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
         <a class="btn btn-primary btn-lg" id="login" role="button">Log In</a>
+        <a class="btn btn-primary btn-lg" id="show-menu" role="button">Show Menu</a>
     </div>
 
 
@@ -69,30 +77,13 @@
 
         // 폼이 전송될 때 코드 실행
 
-    //    function 삼육구게임(){
-    //        if(parseInt($('.game').val())%10 == 3 || parseInt($('.game').val())%10 == 6 || parseInt($('.game').val())%10 == 9){
-        
-    //            console.log("박수")
-           
-    //        }else{
-    //            console.log("통과")
-    //        }}
-
-    var 첫커피양 = 360;
-    var 마신커피 = 0;
-    var 리필양 = 첫커피양*2/3;
-    
-    마신커피 = 첫커피양 + 리필양;
-
-    리필양 = 리필양 + 리필양*2/3;
-
-    마신커피 = 첫커피양 + 리필양;
 
 
-
-    console.log(마신커피)
     
 
+          $('#show-menu').click(function(){
+            $('.left-menu').animate({marginLeft: '0px'})
+          })
 
 
             $('form').on('submit', function(e){
@@ -112,8 +103,11 @@
 
           $('#login').on('click', function(){
 
+              // 자바스크립트로 트리거를 한다.
+              // $('.black-background').css('transform', 'translateY(0px)')
+              $('.black-background').addClass('slide-down');
+
               
-              $('.black-background').fadeIn();
           })
         
 
