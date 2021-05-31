@@ -77,10 +77,6 @@
 
         // 폼이 전송될 때 코드 실행
 
-
-
-    
-
           $('#show-menu').click(function(){
             $('.left-menu').animate({marginLeft: '0px'})
           })
@@ -88,18 +84,38 @@
 
             $('form').on('submit', function(e){
                 // 만약에 이메일 input에 입력된 값이 빈칸인 경우, 폼의 전송을 막음, 안내문 띄움
-                if($('#email').val()==''){
-                    e.preventDefault(); // 폼의 전송을 막는 기능
-                    $('#email-alert').show();
+
+                var 입력한이메일 = $('#email').val();
+                if (/^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i.test(입력한이메일) == false){
+                  e.preventDefault();
                 }
 
-                if($('#password').val()==''){
-                    e.preventDefault();
-                    $('#password-alert').show();
+                // if($('#email').val()==''){
+                //     e.preventDefault(); // 폼의 전송을 막는 기능
+                //     $('#email-alert').show();
+                // }
+
+                // if($('#password').val()==''){
+                //     e.preventDefault();
+                //     $('#password-alert').show();
                     
-                }
+                // }
 
             })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
           $('#login').on('click', function(){
 
@@ -120,6 +136,27 @@
 
           })
 
+          
+          // // 대문자 A부터 z까지 모든 글자
+          // /[A-z]/.test('s');
+          
+          // // 모든 특수문자 포함 문자를 뜻함 S
+          // /\S@/.test('s@');
+
+          // // 이메일 정규식
+          // // \S 특수문자 포함 모든 문자 1개만 뜻함
+          // /\S@\S.\S/;
+
+          // // \S 특수문자 포함 모든 문자 1개 + (뒤에도 계속 찾아주세요)
+          // /\S+@\S+\.\S/.test('asd@asd.com');
+          
+
+          
+
+
+
+
+          
       </script>
 
 
