@@ -95,6 +95,11 @@
                     $('#email-alert').show();
                 }
 
+                var 입력한패스워드 = $('#passward').val();
+                if(/[A-Z]+/.test(입력한패스워드) == false){
+                  e.preventDefault();
+                }
+
                 if($('#password').val()==''){
                     e.preventDefault();
                     $('#password-alert').show();
