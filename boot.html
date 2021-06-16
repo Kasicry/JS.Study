@@ -69,11 +69,11 @@
 
     <h4 class="my-4 text-center">Showcase</h4>
 
-    <div style="overflow: hidden">
+    <div style="overflow: hidden; position: relative">
 
       <div class="slide-container">
         <div class="slide-box">
-          <img src="img/benjamin-wedemeyer-l-BPJHKGjsk-unsplash.d82c3279.jpg">        
+          <img src="img/big-ben-6216420_1920.jpg">        
         </div>
         <div class="slide-box">
           <img src="img/mountains-6318080_1920.jpg">        
@@ -82,11 +82,15 @@
           <img src="img/pexels-martin-damboldt-814499.jpg">        
         </div>
       </div>
+      <button class="slide-before">Before</button>
+      <button class="slide-next">Next</button>
     </div>
 
     <button class="slide-1">1</button>
     <button class="slide-2">2</button>
     <button class="slide-3">3</button>
+
+
 
     <div class="my-5"></div>
 
@@ -144,17 +148,45 @@
 
             })
 
-            $('.slide-1').click(function(){
-              $('.slide-container').css('transform', 'translateX(0vw)');
+            var 지금보이는사진 = 0;
+
+            $('.slide-next').click(function(){
+               
+              // if(지금보이는사진 == 1){
+                지금보이는사진 = 지금보이는사진+1;
+
+                if(지금보이는사진<3){
+                  $('.slide-container').css('transform', 
+                  'translateX(-' + 지금보이는사진 +'00vw)');
+                  
+                  
+                } else if(지금보이는사진 >=3){
+                   지금보이는사진= 2}
+                
+                
+
+              
+              // else if(지금보이는사진 == 2){
+              //   $('.slide-container').css('transform', 'translateX(-200vw)');
+              //   지금보이는사진 = 지금보이는사진+1;
+              // }
+
             });
 
-            $('.slide-2').click(function(){
-              $('.slide-container').css('transform', 'translateX(-100vw)');
-            });
+            $('.slide-before').click(function(){
+              
+              지금보이는사진 = 지금보이는사진 -1;
+              if(지금보이는사진>-1){
+                $('.slide-container').css('transform','translateX(-'+지금보이는사진+'00vw)');
+                
+              } else if(지금보이는사진 <=0){
+                지금보이는사진=0
+              }
+              
+             
 
-            $('.slide-3').click(function(){
-              $('.slide-container').css('transform', 'translateX(-200vw)');
             })
+                
 
 
         
