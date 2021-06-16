@@ -3,7 +3,7 @@
 }
 
 .main-background{
-    background-image: url(wenhao-ryan-txuo6oDDDEM-unsplash.jpg);
+    background-image: url(img/wenhao-ryan-txuo6oDDDEM-unsplash.2bb043ac.jpg);
     background-size: cover; 
     /* 반응형에서도 이쁘게 나오는 cover */
     color: white;
@@ -75,4 +75,18 @@
 .slide-down {
     transform: translateY(0px);
     opacity: 1;
+}
+
+
+.slide-box {
+    width: 100vw;
+    float: left;
+}
+
+.slide-container{
+    width:300vw;    
+    transition: transform 1s;
+}
+.slide-box img {
+    width: 100%;
 }

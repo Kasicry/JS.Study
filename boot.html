@@ -67,8 +67,44 @@
         <a class="btn btn-primary btn-lg" id="show-menu" role="button">Show Menu</a>
     </div>
 
+    <h4 class="my-4 text-center">Showcase</h4>
+
+    <div style="overflow: hidden">
+
+      <div class="slide-container">
+        <div class="slide-box">
+          <img src="img/benjamin-wedemeyer-l-BPJHKGjsk-unsplash.d82c3279.jpg">        
+        </div>
+        <div class="slide-box">
+          <img src="img/mountains-6318080_1920.jpg">        
+        </div>
+        <div class="slide-box">
+          <img src="img/pexels-martin-damboldt-814499.jpg">        
+        </div>
+      </div>
+    </div>
+
+    <button class="slide-1">1</button>
+    <button class="slide-2">2</button>
+    <button class="slide-3">3</button>
+
+    <div class="my-5"></div>
 
     
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
 
 
       <script>
@@ -95,7 +131,7 @@
                     $('#email-alert').show();
                 }
 
-                var 입력한패스워드 = $('#passward').val();
+                var 입력한패스워드 = $('#password').val();
                 if(/[A-Z]+/.test(입력한패스워드) == false){
                   e.preventDefault();
                 }
@@ -107,6 +143,23 @@
                 }
 
             })
+
+            $('.slide-1').click(function(){
+              $('.slide-container').css('transform', 'translateX(0vw)');
+            });
+
+            $('.slide-2').click(function(){
+              $('.slide-container').css('transform', 'translateX(-100vw)');
+            });
+
+            $('.slide-3').click(function(){
+              $('.slide-container').css('transform', 'translateX(-200vw)');
+            })
+
+
+        
+                
+                
 
 
 
