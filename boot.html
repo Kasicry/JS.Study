@@ -90,30 +90,16 @@
                   e.preventDefault();
                 }
 
+                if($('#email').val()==''){
+                    e.preventDefault(); // 폼의 전송을 막는 기능
+                    $('#email-alert').show();
+                }
 
-          //       $('#show-menu').click(function(){
-          //   $('.left-menu').animate({marginLeft: '0px'})
-          // })
-
-
-          //   $('form').on('submit', function(e){
-          //       // 만약에 이메일 input에 입력된 값이 빈칸인 경우, 폼의 전송을 막음, 안내문 띄움
-
-          //       var 입력한이메일 = $('#email').val();
-          //       if (/^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i.test(입력한이메일) == false){
-          //         e.preventDefault();
-          //       }
-
-                // if($('#email').val()==''){
-                //     e.preventDefault(); // 폼의 전송을 막는 기능
-                //     $('#email-alert').show();
-                // }
-
-                // if($('#password').val()==''){
-                //     e.preventDefault();
-                //     $('#password-alert').show();
+                if($('#password').val()==''){
+                    e.preventDefault();
+                    $('#password-alert').show();
                     
-                // }
+                }
 
             })
 
