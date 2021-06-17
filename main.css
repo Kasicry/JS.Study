@@ -57,9 +57,16 @@
 .nav-black{
     background: white;
     color: black;
-    font-size: 40px;
+    
 }
 
+.large-logo{
+    font-size: 30px;
+}
+
+.small-logo{
+    font-size: 20px;
+}
 .nav-sub{
     display: none;
 }

@@ -46,7 +46,7 @@
     </div>
 
     <div class="nav-menu">
-        <a>Shirts Studio</a>
+        <h4 class="large-logo small-logo">Shirts Studio</h4>
         <a id='nav-sub-button'>Products</a>
     </div>
 
@@ -182,8 +182,10 @@
             // window = viewport를 말함
             $(window).on('scroll', function(){
                // viewport가 scroll 되었을때 .. 코드를 실행해주세요.
-               if($(window).scrollTop()>300){
+               if($(window).scrollTop()>=100){
               $('.nav-menu').addClass('nav-black');
+              $('.large-logo').removeClass('small-logo');
+              
             }
 
             console.log($(window).scrollTop()) // 스크롤된 높이를 알려줌
@@ -192,7 +194,9 @@
 
             $(window).on('scroll', function(){
                // viewport가 scroll 되었을때 .. 코드를 실행해주세요.
-               if($(window).scrollTop()==0){
+               if($(window).scrollTop()<=50){
+              
+              $('.large-logo').addClass('small-logo');
               $('.nav-menu').removeClass('nav-black');
             }
           });
