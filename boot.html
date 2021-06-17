@@ -46,7 +46,7 @@
     </div>
 
     <div class="nav-menu">
-        <h4>Shirts Studio</h4>
+        <a>Shirts Studio</a>
         <a id='nav-sub-button'>Products</a>
     </div>
 
@@ -54,8 +54,7 @@
         <li class="list-group-item">Outer</li>
         <li class="list-group-item">Innerwear</li>
         <li class="list-group-item">Shirts</li>
-     
-      </ul>
+    </ul>
 
 
     <div class="jumbotron main-background">
@@ -85,12 +84,6 @@
       <button class="slide-before">Before</button>
       <button class="slide-next">Next</button>
     </div>
-
-    <button class="slide-1">1</button>
-    <button class="slide-2">2</button>
-    <button class="slide-3">3</button>
-
-
 
     <div class="my-5"></div>
 
@@ -162,10 +155,7 @@
                   
                 } else if(지금보이는사진 >=3){
                    지금보이는사진= 2}
-                
-                
-
-              
+             
               // else if(지금보이는사진 == 2){
               //   $('.slide-container').css('transform', 'translateX(-200vw)');
               //   지금보이는사진 = 지금보이는사진+1;
@@ -181,11 +171,31 @@
                 
               } else if(지금보이는사진 <=0){
                 지금보이는사진=0
-              }
-              
-             
-
+              }              
             })
+
+
+
+            // 스크롤바를 내리면..
+            // .nav-menu이 background : white;
+
+            // window = viewport를 말함
+            $(window).on('scroll', function(){
+               // viewport가 scroll 되었을때 .. 코드를 실행해주세요.
+               if($(window).scrollTop()>300){
+              $('.nav-menu').addClass('nav-black');
+            }
+
+            console.log($(window).scrollTop()) // 스크롤된 높이를 알려줌
+
+            });
+
+            $(window).on('scroll', function(){
+               // viewport가 scroll 되었을때 .. 코드를 실행해주세요.
+               if($(window).scrollTop()==0){
+              $('.nav-menu').removeClass('nav-black');
+            }
+          });
                 
 
 
